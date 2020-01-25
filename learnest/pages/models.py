@@ -3,7 +3,7 @@ from django.db import models
 
 class Page(models.Model):
     title = models.CharField(verbose_name="Título", max_length=200)
-    content = RichTextField(verbose_name="Contenido")
+    content = models.CharField(verbose_name="Contenido", max_length=400)
     link = models.URLField(
         verbose_name="Link de pago", max_length=200)
     THEME_CHOICES = (
